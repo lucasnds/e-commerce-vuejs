@@ -8,7 +8,7 @@
        :key="index" >
         <div class="product-image" :style="{backgroundImage: 'url('+product.image+')'}"></div>
         <h4>{{product.title}}</h4>
-        <p class="price">US$ {{product.price.toFixed(2)}}</p>
+        <p class="price">R$ {{product.price.toFixed(2).replace('.',',')}}</p>
         <button v-if="!isInBag(product)" @click="addToBag(product)">Adicionar ao carrinho</button>
         <button 
         v-else 
@@ -57,7 +57,7 @@ export default {
 
 
       .product {
-        flex: 0 0 30%;
+        flex: 0 0 25%;
         box-sizing: border-box;  
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         padding: 16px;
@@ -95,6 +95,7 @@ export default {
         p.price {
           font-size: 20px;
           font-weight: bold;
+          margin:20px 0px;
         }
 
         button {

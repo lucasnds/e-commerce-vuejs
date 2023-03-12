@@ -1,16 +1,21 @@
 <template>
   <div id="nav">
-    <router-link to="/">Início</router-link> -
-    <router-link to="/basket">Carrinho ({{ this.productsInBag.length }})</router-link> 
+    <router-link to="/"> <fa icon="home"/> Início</router-link> -
+    <router-link to="/basket"><fa :icon="['fas', 'cart-shopping']" /> Carrinho ({{ this.productsInBag.length }})</router-link> 
     <!--  -->
   </div>
   <router-view/>
+  <Footer/>
 </template>
 
 <script>
 //consumindo a api da fake store com a ajuda da lib 'axios' e usando o lifeCycle Hooks 'created' que significa criado, ou seja, depois da inicialização da api
 import {mapState} from 'vuex'
+import Footer from './components/Footer.vue'
   export default {
+    components:{
+    Footer
+  },
   created(){
     this.$store.dispatch('loadProducts')
     this.$store.dispatch('loadBag')
@@ -25,14 +30,17 @@ computed:mapState([
 
 
 <style lang="scss">
+*{
+  margin:0
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  max-width: 1280px;
-  margin: 80px auto;
+  //max-width: 1280px;
+  margin: 80px auto 0px auto;
 }
 
 #nav {

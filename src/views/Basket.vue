@@ -13,10 +13,10 @@
                 <span class="quantity">{{product.quantity}}</span>
                 <button @click="product.quantity++">+</button>
               </span>
-              <span class="amount">US$ {{(product.price * product.quantity).toFixed(2)}}</span>
+              <span class="amount">R$ {{(product.price * product.quantity).toFixed(2).replace('.',',')}}</span>
             </div>
           </div>
-          <div class="grand-total"> Total do pedido: {{orderTotal()}}</div>
+          <div class="grand-total"> Total do pedido: R$ {{orderTotal()}}</div>
       </template>
 
       <template v-else>
@@ -42,7 +42,7 @@ export default {
     this.productsInBag.forEach(item =>{
       total += item.price *item.quantity
     })
-    return total.toFixed(2)
+    return total.toFixed(2).replace('.',',')
 
    }
   },
