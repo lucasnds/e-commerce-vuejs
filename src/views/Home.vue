@@ -5,7 +5,8 @@
       <div v-for="(product, index) in this.products"
        class="product"
        :class="{inBag:isInBag(product)}"
-       :key="index" >
+       :key="index" 
+       >
         <div class="product-image" :style="{backgroundImage: 'url('+product.image+')'}"></div>
         <h4>{{product.title}}</h4>
         <p class="price">R$ {{product.price.toFixed(2).replace('.',',')}}</p>
@@ -39,7 +40,7 @@ export default {
       product.quantity = 1 
       this.$store.dispatch('addToBag',product)
     },
-   //
+   //método verifica se já existo o produto dentro da bag
     isInBag(product){
       return this.productsInBag.find(item=>item.id==product.id)
     }
@@ -56,6 +57,7 @@ export default {
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom:50px;
+      margin-top:30px;
 
 
       .product {

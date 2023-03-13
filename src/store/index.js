@@ -5,7 +5,8 @@ export default createStore({
     state: {
         //como se fosse o 'data', armazena dados
         products: [],
-        productsInBag: []
+        productsInBag: [],
+        //filteredProducts: []
 
     },
     mutations: {
@@ -17,6 +18,9 @@ export default createStore({
             state.productsInBag = products
             console.log(products)
         },
+        // filter(state, producs) {
+
+        //},
         addToBag(state, product) {
             state.productsInBag.push(product)
             localStorage.setItem('productsInBag', JSON.stringify(state.productsInBag))

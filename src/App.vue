@@ -1,10 +1,21 @@
 <template>
   <div class="container">
     <div id="nav">
-      <router-link to="/"> <fa icon="home"/> Início</router-link> -
-      <router-link to="/basket"><fa :icon="['fas', 'cart-shopping']" /> Carrinho ({{ this.productsInBag.length }})</router-link> 
+      <router-link to="/"> <fa icon="home"/> Início</router-link> 
+      <div>
+        <router-link to="/accessories"> Acessórios </router-link> -
+        <router-link to="/electronics"> Eletrônicos </router-link> -
+        <router-link to="/womenclothes"> Roupas Femeninas </router-link> - 
+        <router-link to="/menclothes"> Roupas Masculinas </router-link> 
+      </div>
+      <router-link to="/basket">
+        <fa :icon="['fas', 'cart-shopping']" />
+         Carrinho ({{ this.productsInBag.length }})
+      </router-link> 
       <!--  -->
     </div>
+    
+    
     <router-view/>
     <Footer/>
   </div>
@@ -20,7 +31,7 @@ import Footer from './components/Footer.vue'//chamando o componente
   },
   created(){
     this.$store.dispatch('loadProducts')
-    this.$store.dispatch('loadBag')
+    this.$store.dispatch('loadBag') 
   
 },
 computed:mapState([
@@ -62,6 +73,9 @@ computed:mapState([
   text-align: center;
   background-color: rgb(37, 37, 37);
   color: white;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
 
 
   a {

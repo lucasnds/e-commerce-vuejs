@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-      <p>Developer Lucas Nascimento © 2023</p>
+      <p> Lucas Nascimento Developer © 2023</p>
     </footer>
 </template>
 
