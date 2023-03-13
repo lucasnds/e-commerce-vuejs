@@ -1,20 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/"> <fa icon="home"/> Início</router-link> -
-    <router-link to="/basket"><fa :icon="['fas', 'cart-shopping']" /> Carrinho ({{ this.productsInBag.length }})</router-link> 
-    <!--  -->
+  <div class="container">
+    <div id="nav">
+      <router-link to="/"> <fa icon="home"/> Início</router-link> -
+      <router-link to="/basket"><fa :icon="['fas', 'cart-shopping']" /> Carrinho ({{ this.productsInBag.length }})</router-link> 
+      <!--  -->
+    </div>
+    <router-view/>
+    <Footer/>
   </div>
-  <router-view/>
-  <Footer/>
 </template>
 
 <script>
 //consumindo a api da fake store com a ajuda da lib 'axios' e usando o lifeCycle Hooks 'created' que significa criado, ou seja, depois da inicialização da api
-import {mapState} from 'vuex'
-import Footer from './components/Footer.vue'
+import {mapState} from 'vuex'//importando a biblioteca
+import Footer from './components/Footer.vue'//chamando o componente
   export default {
     components:{
-    Footer
+    Footer//declarando o componente
   },
   created(){
     this.$store.dispatch('loadProducts')
@@ -33,6 +35,11 @@ computed:mapState([
 *{
   margin:0
 }
+
+.container{
+  min-height:100vh;
+  position:relative;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,6 +48,8 @@ computed:mapState([
   color: #2c3e50;
   //max-width: 1280px;
   margin: 80px auto 0px auto;
+  
+  
 }
 
 #nav {

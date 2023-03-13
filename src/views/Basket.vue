@@ -37,6 +37,7 @@ export default {
   ]),
 
   methods: {
+    //método pra calcular o total do carrinho
    orderTotal(){
     let total = 0
     this.productsInBag.forEach(item =>{
@@ -53,7 +54,7 @@ export default {
 <style lang="scss">
 
 .basket {
-  padding: 60px 0;  
+  padding: 10px 0 60px 0;  
   .items {
     max-width: 800px;
     margin: auto;

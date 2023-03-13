@@ -6,9 +6,9 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { faHome, faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
-library.add(faHome, faCartShopping)
+library.add(faHome, faCartShopping) //icons
 createApp(App)
-    .component("fa", FontAwesomeIcon)
+    .component("fa", FontAwesomeIcon) //icons
     .use(store)
-    .use(router)
-    .mount('#app')
+    .use(router) //biblioteca
+    .mount('#app') //principal

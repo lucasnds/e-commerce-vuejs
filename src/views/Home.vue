@@ -34,11 +34,12 @@ export default {
    
   
   methods: {
+    //método pra adicionar um produto chamando dinamicante um atributo "quantity" que nao tem na api inicial
     addToBag(product){
       product.quantity = 1 
       this.$store.dispatch('addToBag',product)
     },
-   
+   //
     isInBag(product){
       return this.productsInBag.find(item=>item.id==product.id)
     }
@@ -54,6 +55,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom:50px;
 
 
       .product {
