@@ -26,5 +26,5 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Hospedado em :
-https://640f4083f300560d8efa8c65--lucasstore.netlify.app/#/
+https://ecommercelucas.netlify.app/#/
 
