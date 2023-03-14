@@ -59,6 +59,10 @@ computed:mapState([
   color: #2c3e50;
   //max-width: 1280px;
   margin: 80px auto 0px auto;
+
+  @media screen and (max-width: 503px) {
+    margin: 100px auto 0px auto;
+  }
   
   
 }
@@ -77,7 +81,6 @@ computed:mapState([
   flex-direction:row;
   justify-content:space-around;
 
-
   a {
     color: white;
     text-decoration: none;
@@ -87,4 +90,5 @@ computed:mapState([
     }
   }
 }
+
 </style>
