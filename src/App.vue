@@ -61,7 +61,7 @@ computed:mapState([
   margin: 80px auto 0px auto;
 
   @media screen and (max-width: 503px) {
-    margin: 100px auto 0px auto;
+    margin: 110px auto 0px auto;
   }
   
   

@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Basket from '../views/Basket.vue'
-import Accessories from '../views/Accessories.vue'
-import Electronics from '../views/Electronics.vue'
-import MenClothes from '../views/MenClothes.vue'
-import WomenClothes from '../views/WomenClothes.vue'
+//import Basket from '../views/Basket.vue'
+// import Accessories from '../views/Accessories.vue'
+// import Electronics from '../views/Electronics.vue'
+// import MenClothes from '../views/MenClothes.vue'
+// import WomenClothes from '../views/WomenClothes.vue'
 
 
 const routes = [{
@@ -15,27 +15,32 @@ const routes = [{
     {
         path: '/basket',
         name: 'Basket',
-        component: Basket
+        component: () =>
+            import ('../views/Basket.vue')
     },
     {
         path: '/electronics',
         name: 'Electronics',
-        component: Electronics
+        component: () =>
+            import ('../views/Electronics.vue')
     },
     {
         path: '/accessories',
         name: 'Accessories',
-        component: Accessories
+        component: () =>
+            import ('../views/Accessories.vue')
     },
     {
         path: '/menclothes',
         name: 'MenClothes',
-        component: MenClothes
+        component: () =>
+            import ('../views/MenClothes.vue')
     },
     {
         path: '/womenclothes',
         name: 'WomenClothes',
-        component: WomenClothes
+        component: () =>
+            import ('../views/WomenClothes.vue')
     }
 ]
 
