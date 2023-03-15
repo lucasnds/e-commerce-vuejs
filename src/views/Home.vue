@@ -15,7 +15,7 @@
         v-else 
         class="remove" 
         @click="this.$store.dispatch('removeFromBag',product.id)"
-        >Remova do carrinho</button>
+        ><fa icon="trash"/>  Remova do carrinho</button>
       </div>
       
     </div>

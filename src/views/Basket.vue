@@ -4,7 +4,7 @@
 
       <template v-if="this.productsInBag.length">
           <div class="item" v-for="(product, index) in this.productsInBag" :key="index">
-            <div @click="this.$store.dispatch('removeFromBag',product.id)" class="remove">Remover Produto</div>
+            <div @click="this.$store.dispatch('removeFromBag',product.id)" class="remove"><fa icon="trash"/>  Remover Produto</div>
             <div class="photo"><img v-bind:src="product.image" alt=""></div>
             <div class="description">{{product.title}} </div>
             <div class="price">
