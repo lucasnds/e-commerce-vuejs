@@ -17,9 +17,8 @@ export default {
   padding: 20px 0;
   width: 100%;
   background-color: rgb(37, 37, 37);
-  margin:auto 0;
-  //position: absolute;
-  //bottom: 0;
+  position: absolute;
+  bottom: 0;
   
  p {
   color: white;

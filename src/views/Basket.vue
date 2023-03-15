@@ -120,6 +120,7 @@ export default {
           font-weight: bold;
           text-align: right;
           margin-top: 8px;
+          padding-bottom:100px;
       }
 
   }

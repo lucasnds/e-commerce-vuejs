@@ -53,6 +53,7 @@ export default createStore({
                 commit('removeFromBag', productId)
         }
 
+
     },
     modules: {}
 })

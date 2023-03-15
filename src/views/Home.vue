@@ -16,8 +16,8 @@
         class="remove" 
         @click="this.$store.dispatch('removeFromBag',product.id)"
         >Remova do carrinho</button>
-
       </div>
+      
     </div>
     
   </div>
@@ -56,13 +56,13 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom:50px;
       margin-top:30px;
+     
 
 
       .product {
         flex: 0 0 25%;
-        box-sizing: border-box;  
+        //box-sizing: border-box;  
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         padding: 16px;
         margin: 8px;
