@@ -35,11 +35,15 @@ export default createStore({
     },
     actions: {
         loadProducts({ commit }) {
-            axios
-                .get('https://fakestoreapi.com/products')
-                .then(response => {
-                    commit('loadProducts', response.data) //chamando a mutation
-                })
+            try {
+                axios
+                    .get('https://fakestoreapi.com/products')
+                    .then(response => {
+                        commit('loadProducts', response.data) //chamando a mutation
+                    })
+            } catch (error) {
+                console.error(error)
+            }
         },
         loadBag({ commit }) {
             if (localStorage.getItem('productsInBag'))
