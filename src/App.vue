@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="nav">
-      <router-link to="/"> <fa icon="home"/> Teste</router-link> 
+      <router-link to="/"> <fa icon="home"/> Início</router-link> 
       <div>
         <router-link to="/accessories"> Acessórios </router-link> -
         <router-link to="/electronics"> Eletrônicos </router-link> -
